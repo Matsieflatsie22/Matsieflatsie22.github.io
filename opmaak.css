@@ -44,12 +44,13 @@ nav a:hover {
 
 .dropdown {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .dropdown-inhoud {
   display: none;
   position: absolute;
-  top: 24px;
+  top: 100%;
   left: 0;
   background-color: #252540;
   border-radius: 8px;
@@ -76,13 +77,4 @@ nav a:hover {
 }
 
 .foto {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background-color: #2E2E4A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #F2C744;
-  font-size: 13px;
-}
+  width:
