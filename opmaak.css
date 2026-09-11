@@ -57,6 +57,7 @@ nav a:hover {
 .dropdown {
   position: relative;
   padding-bottom: 20px;
+  min-width: 130px;
 }
 
 .dropdown-inhoud {
