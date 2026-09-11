@@ -3,9 +3,21 @@ body {
   font-family: Arial, sans-serif;
   background-color: #12121F;
   color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.storm {
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  opacity: 0.5;
+  z-index: 0;
 }
 
 nav {
+  position: relative;
+  z-index: 1;
   background-color: #1B1B2E;
   display: flex;
   align-items: center;
@@ -70,11 +82,49 @@ nav a:hover {
 }
 
 .intro {
+  position: relative;
+  z-index: 1;
   display: flex;
   gap: 24px;
   align-items: center;
-  padding: 32px 28px;
+  padding: 40px 28px 0;
 }
 
 .foto {
-  width:
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #2E2E4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2C744;
+  font-size: 13px;
+  border: 2px solid #F2C744;
+  flex-shrink: 0;
+}
+
+.uitgelicht {
+  position: relative;
+  z-index: 1;
+  margin: 28px 28px 0;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #252540;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2C744;
+  font-size: 13px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  background-color: #1B1B2E;
+  padding: 14px 28px;
+  text-align: center;
+  color: #7A7A8C;
+  font-size: 12px;
+}
