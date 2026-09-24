@@ -1,12 +1,16 @@
+/* ============================================= */
+/* ALGEMENE OPMAAK VAN DE HELE PAGINA */
+/* ============================================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #12121F;
-  color: #ffffff;
+  background-color: #12121F;   /* achtergrondkleur: donkerblauw-zwart */
+  color: #ffffff;               /* tekstkleur: wit */
   position: relative;
   overflow-x: hidden;
 }
 
+/* Decoratieve storm-cirkels op de achtergrond (alleen op homepage) */
 .storm {
   position: absolute;
   top: -60px;
@@ -15,101 +19,125 @@ body {
   z-index: 0;
 }
 
+/* ============================================= */
+/* MENU / NAVIGATIEBALK */
+/* ============================================= */
+/* Selector 'nav' selecteert de hele navigatiebalk bovenaan de pagina */
 nav {
   position: relative;
-  z-index: 5;
-  background-color: #1B1B2E;
-  display: flex;
+  z-index: 5;                       /* zorgt dat het menu boven andere elementen ligt */
+  background-color: #1B1B2E;        /* achtergrondkleur van de menubalk */
+  display: flex;                    /* logo en menu-items naast elkaar */
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 28px;
+  justify-content: space-between;   /* logo links, menu rechts */
+  padding: 20px 28px;                /* ruimte binnenin de balk (hoogte + breedte) */
 }
 
+/* Selector '.logo' selecteert het logo-element (class="logo") */
 .logo {
-  color: #F2C744;
+  color: #F2C744;      /* tekstkleur van het logo: geel */
   font-size: 22px;
 }
 
+/* Selector 'nav ul' selecteert de lijst (ul) die BINNEN de nav zit */
 nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 24px;
+  list-style-type: none;   /* geen bolletjes voor de lijst-items */
+  display: flex;            /* menu-items op een rij i.p.v. onder elkaar */
+  gap: 24px;                 /* ruimte tussen de menu-items */
   margin: 0;
   padding: 0;
 }
 
+/* Selector 'nav a' selecteert alle links (a) binnen de nav */
 nav a {
-  color: #B8B8C8;
-  text-decoration: none;
+  color: #B8B8C8;              /* tekstkleur van inactieve menu-links: grijs */
+  text-decoration: none;       /* geen onderstreping */
   font-size: 14px;
 }
 
+/* Selector 'nav a.actief' selecteert alleen links met class="actief" */
+/* Dit geeft aan op welke pagina de gebruiker zich bevindt */
 nav a.actief {
-  color: #ffffff;
-  border-bottom: 2px solid #F2C744;
+  color: #ffffff;                     /* tekstkleur van de actieve pagina: wit */
+  border-bottom: 2px solid #F2C744;   /* geel streepje onder de actieve link */
   padding-bottom: 4px;
 }
 
+/* :hover is een pseudo-selector: stijl die geldt zodra je eroverheen scrolt/hovert */
 nav a:hover {
-  color: #F2C744;
+  color: #F2C744;   /* tekstkleur wordt geel bij hoveren */
 }
 
+/* ============================================= */
+/* DROPDOWNMENU (Fortnite en Onderwerpen) */
+/* ============================================= */
+/* .dropdown = de li die het uitklapmenu bevat */
 .dropdown {
-  position: relative;
-  padding-bottom: 20px;
-  min-width: 130px;
+  position: relative;   /* nodig zodat het uitklapmenu er precies onder verschijnt */
+  padding-bottom: 20px; /* extra ruimte zodat de muis het menu kan bereiken */
+  min-width: 130px;     /* minimale breedte, gelijk aan het uitklapmenu zelf */
 }
 
+/* .dropdown-inhoud = het uitklapmenu zelf (verborgen totdat je hovert) */
 .dropdown-inhoud {
-  display: none;
+  display: none;                     /* standaard onzichtbaar */
   position: absolute;
-  top: 100%;
+  top: 100%;                          /* direct onder het hoofditem */
   left: 0;
-  background-color: #252540;
+  background-color: #252540;          /* achtergrondkleur van het uitklapmenu */
   border-radius: 8px;
   padding: 6px 0;
-  min-width: 130px;
+  min-width: 130px;                    /* breedte van het uitklapmenu */
   flex-direction: column;
 }
 
+/* Als je over .dropdown hovert, wordt .dropdown-inhoud zichtbaar (display: flex) */
 .dropdown:hover .dropdown-inhoud {
   display: flex;
 }
 
+/* Selector '.dropdown-inhoud li a' selecteert de links IN het uitklapmenu */
 .dropdown-inhoud li a {
-  display: block;
+  display: block;         /* hele breedte klikbaar maken */
   padding: 8px 16px;
-  color: #DADAE8;
+  color: #DADAE8;          /* tekstkleur van items in het uitklapmenu */
 }
 
+/* ============================================= */
+/* INTRO-SECTIE (bovenaan elke pagina) */
+/* ============================================= */
 .intro {
   position: relative;
   z-index: 1;
   display: flex;
   gap: 24px;
   align-items: center;
-  padding: 40px 28px 0;
+  padding: 40px 28px 0;   /* boven-rechts-onder-links */
 }
 
+/* Ronde foto-placeholder op de homepage */
 .foto {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
+  width: 96px;                    /* breedte van de foto-cirkel */
+  height: 96px;                   /* hoogte van de foto-cirkel */
+  border-radius: 50%;             /* maakt er een cirkel van */
   background-color: #2E2E4A;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #F2C744;
   font-size: 13px;
-  border: 2px solid #F2C744;
+  border: 2px solid #F2C744;      /* gele rand om de foto */
   flex-shrink: 0;
 }
 
+/* ============================================= */
+/* UITGELICHTE AFBEELDING / DIAGRAM-BLOK */
+/* ============================================= */
 .uitgelicht {
   position: relative;
   z-index: 1;
   margin: 28px 28px 0;
-  height: 150px;
+  height: 150px;                 /* standaardhoogte van het blok */
   border-radius: 10px;
   background-color: #252540;
   display: flex;
@@ -119,13 +147,16 @@ nav a:hover {
   font-size: 13px;
 }
 
+/* ============================================= */
+/* FOOTER (onderaan elke pagina) */
+/* ============================================= */
 footer {
   position: relative;
   z-index: 1;
   margin-top: 24px;
-  background-color: #1B1B2E;
+  background-color: #1B1B2E;   /* zelfde kleur als de nav, voor herkenbaarheid */
   padding: 14px 28px;
   text-align: center;
-  color: #7A7A8C;
+  color: #7A7A8C;               /* gedempte tekstkleur voor minder belangrijke tekst */
   font-size: 12px;
 }
