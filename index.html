@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- vertelt de browser dat dit een HTML5-document is -->
 <html>
+  <!-- HEAD: informatie over de pagina, deze staat NIET zichtbaar op de pagina -->
   <head>
-    <title>Fortnite Hub</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <title>Fortnite Hub</title>           <!-- tekst die in het tabblad van de browser staat -->
+    <meta charset="utf-8">                <!-- zorgt dat speciale tekens (zoals ë) goed worden getoond -->
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt het CSS-bestand met alle opmaak aan deze pagina -->
   </head>
+
+  <!-- BODY: alles wat zichtbaar is op de pagina -->
   <body>
 
-    <!-- Decoratieve storm-cirkels als achtergrondelement -->
+    <!-- STORM-CIRKELS: decoratieve achtergrond, getekend met SVG (vector-afbeelding).
+         Elke <circle> is een cirkel; r = straal, stroke = kleur van de lijn,
+         opacity = doorzichtigheid. De positie wordt bepaald in de CSS (.storm) -->
     <svg class="storm" width="320" height="320" viewBox="0 0 320 320">
       <circle cx="160" cy="160" r="150" fill="none" stroke="#8A4FE0" stroke-width="1.5" opacity="0.5"/>
       <circle cx="160" cy="160" r="110" fill="none" stroke="#8A4FE0" stroke-width="1.5" opacity="0.6"/>
@@ -15,10 +20,17 @@
       <circle cx="160" cy="160" r="30" fill="#F2C744" opacity="0.15"/>
     </svg>
 
+    <!-- MENU: de navigatiebalk bovenaan. <nav> is het element voor navigatie.
+         Binnenin staat een lijst (<ul>) met menu-items (<li>), elk met een link (<a>).
+         Een link werkt zo: <a href="bestand.html">Tekst</a> -->
     <nav>
-      <div class="logo">FORTNITE HUB</div>
+      <div class="logo">FORTNITE HUB</div> <!-- het logo links, opgemaakt via .logo in de CSS -->
       <ul>
+        <!-- class="actief" geeft aan op welke pagina je bent (geel streepje in de CSS) -->
         <li><a href="index.html" class="actief">Home</a></li>
+
+        <!-- DROPDOWN 1: een <li> met class="dropdown" bevat een genest (tweede) <ul>.
+             Dat geneste menu is verborgen en klapt open als je erover hovert (zie .dropdown in de CSS) -->
         <li class="dropdown">
           <a href="#">Fortnite</a>
           <ul class="dropdown-inhoud">
@@ -27,6 +39,8 @@
             <li><a href="kaart.html">Kaart</a></li>
           </ul>
         </li>
+
+        <!-- DROPDOWN 2: zelfde opbouw, met de informatica-onderwerpen -->
         <li class="dropdown">
           <a href="#">Onderwerpen</a>
           <ul class="dropdown-inhoud">
@@ -35,31 +49,39 @@
             <li><a href="compressie.html">Compressie</a></li>
           </ul>
         </li>
+
+        <!-- Gewone menu-items zonder dropdown -->
         <li><a href="invoer-verwerking-uitvoer.html">Invoer-verwerking-uitvoer</a></li>
         <li><a href="ai.html">AI</a></li>
       </ul>
     </nav>
 
-    <!-- Intro-sectie: tekst over mezelf -->
+    <!-- INTRO: het blok met informatie over mezelf.
+         <section> deelt de pagina op in onderdelen; class="intro" koppelt de opmaak uit de CSS -->
     <section class="intro">
+      <!-- Ronde foto-placeholder (opgemaakt via .foto). Vervang door een echte foto met:
+           <img src="Images/profielfoto.jpg" alt="Foto van Mats" class="foto"> -->
       <div class="foto">foto</div>
       <div>
-        <h1>Hoi, ik ben Mats</h1>
+        <h1>Hoi, ik ben Mats</h1> <!-- <h1> is de grootste kop op de pagina -->
+        <!-- <p> is een paragraaf tekst -->
         <p>Ik speel hockey als aanvaller en daarnaast speel ik ook gitaar. In mijn vrije tijd game ik graag, vooral Fortnite spreekt me aan door de combinatie van bouwen, schieten en steeds veranderende content per seizoen. Deze website heb ik gemaakt voor mijn informatica-vak, waarbij ik mijn eigen interesse (Fortnite) heb gecombineerd met onderwerpen die we in de les hebben behandeld.</p>
       </div>
     </section>
 
-    <!-- Uitlegvideo: hier komt de video waarin ik mijn site en code laat zien -->
+    <!-- UITLEGVIDEO: de video waarin ik mijn site en code uitleg.
+         Een <iframe> sluit een YouTube-video in zodat deze direct op mijn site afspeelt.
+         Vervang VIDEO_ID door het stuk na "watch?v=" uit de YouTube-link. -->
     <section style="padding: 0 28px;">
-      <h2>Uitlegvideo</h2>
+      <h2>Uitlegvideo</h2> <!-- <h2> is een kop van niveau 2 (kleiner dan h1) -->
       <div style="position:relative; z-index:1; border-radius:10px; overflow:hidden;">
-        <!-- vervang VIDEO_ID zodra je eigen uitlegvideo op YouTube staat -->
         <iframe width="100%" height="360" src="https://www.youtube.com/embed/VIDEO_ID" title="Uitlegvideo van mijn website" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
+    <!-- FOOTER: de voetregel onderaan de pagina -->
     <footer>
-      gemaakt door Mats &middot; laatst bijgewerkt
+      gemaakt door Mats &middot; laatst bijgewerkt <!-- &middot; is een HTML-code voor het middenpuntje · -->
     </footer>
 
   </body>
