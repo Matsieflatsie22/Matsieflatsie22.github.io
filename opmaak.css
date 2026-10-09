@@ -160,3 +160,17 @@ footer {
   color: #7A7A8C;               /* gedempte tekstkleur voor minder belangrijke tekst */
   font-size: 12px;
 }
+
+/* ============================================= */
+/* AFBEELDINGEN: overal dezelfde (kleinere) grootte */
+/* ============================================= */
+/* Selector '.afbeelding' selecteert elke <img> met class="afbeelding" */
+.afbeelding {
+  display: block;
+  width: 100%;            /* vult het blok, maar nooit breder dan max-width */
+  max-width: 450px;       /* maximale breedte: kleiner dan eerst */
+  height: 280px;          /* hoogte: voor alle afbeeldingen exact gelijk */
+  object-fit: cover;      /* afbeelding wordt bijgesneden i.p.v. uitgerekt */
+  margin: 0 auto;         /* centreert de afbeelding in het blok */
+  border-radius: 10px;
+}
