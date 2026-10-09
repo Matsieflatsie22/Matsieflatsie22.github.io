@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Skins - Fortnite Hub</title>
+    <title>Skins - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -32,18 +37,21 @@
       </ul>
     </nav>
 
+    <!-- UITLEG: tekst over skins in Fortnite -->
     <section class="intro">
       <div>
         <h1>Skins</h1>
         <p>Skins zijn de outfits waarmee je personage eruitziet. Ze hebben geen invloed op hoe goed je speelt, maar zijn puur voor de stijl. Je kunt skins kopen in de item-shop (die elke dag verandert), verdienen via het Battle Pass (een seizoensgebonden beloningssysteem), of soms winnen via evenementen.</p>
-        <p>Sommige skins zijn erg zeldzaam en alleen tijdens een bepaald seizoen of evenement te krijgen — die worden daarna niet meer verkocht, wat ze extra bijzonder maakt binnen de community.</p>
+        <p>Sommige skins zijn erg zeldzaam en alleen tijdens een bepaald seizoen of evenement te krijgen. Die worden daarna niet meer verkocht, wat ze extra bijzonder maakt binnen de community.</p>
       </div>
     </section>
 
-  <!-- Afbeelding van een skin -->
-<section class="uitgelicht" style="height:auto; padding:24px;">
-  <img class="afbeelding" src="Images/Top-7-Rarest-Fortnite-Skins.jpg" alt="Zeldzame skins uit Fortnite">
-</section>
+    <!-- AFBEELDING: een <img> toont een plaatje. src = waar het bestand staat (map Images),
+         alt = beschrijving als de afbeelding niet laadt. class="afbeelding" zorgt dat alle
+         afbeeldingen even groot zijn (breedte en hoogte staan in de CSS) -->
+    <section class="uitgelicht" style="height:auto; padding:24px;">
+      <img class="afbeelding" src="Images/Top-7-Rarest-Fortnite-Skins.jpg" alt="Zeldzame skins uit Fortnite">
+    </section>
 
   </body>
 </html>

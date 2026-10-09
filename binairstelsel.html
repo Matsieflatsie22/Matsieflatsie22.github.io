@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Binair stelsel - Fortnite Hub</title>
+    <title>Binair stelsel - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -32,10 +37,12 @@
       </ul>
     </nav>
 
+    <!-- UITLEG: tekst over het binaire stelsel. <section> deelt de pagina op in blokken,
+         <h1> is de hoofdkop, <p> is een paragraaf, <strong> maakt tekst dikgedrukt -->
     <section class="intro">
       <div>
         <h1>Binair stelsel</h1>
-        <p>Computers rekenen niet zoals wij, met cijfers van 0 tot 9. Ze gebruiken het <strong>binaire stelsel</strong>: een systeem met maar twee cijfers, 0 en 1. Dat komt doordat een computerchip eigenlijk alleen kan detecteren of er wel of geen stroom loopt — aan (1) of uit (0).</p>
+        <p>Computers rekenen niet zoals wij, met cijfers van 0 tot 9. Ze gebruiken het <strong>binaire stelsel</strong>: een systeem met maar twee cijfers, 0 en 1. Dat komt doordat een computerchip eigenlijk alleen kan detecteren of er wel of geen stroom loopt, aan (1) of uit (0).</p>
 
         <p>Elk cijfer in een binair getal heeft een plaatswaarde die steeds verdubbelt: 1, 2, 4, 8, 16, enzovoort (van rechts naar links). Door de plaatswaarden van de enen bij elkaar op te tellen, kun je een binair getal omrekenen naar het decimale stelsel dat wij gebruiken.</p>
 
@@ -43,7 +50,8 @@
       </div>
     </section>
 
-    <!-- Voorbeeld: binair getal 1101 omrekenen naar decimaal 13 -->
+    <!-- DIAGRAM: voorbeeld van 1101 (binair) = 13 (decimaal), getekend met SVG.
+         Elke <rect> is een vakje, elke <text> is de tekst erin -->
     <section class="uitgelicht" style="height:auto; padding:24px;">
       <svg width="100%" viewBox="0 0 680 180" role="img">
         <title>Binair getal 1101 omgezet naar decimaal 13</title>
@@ -70,22 +78,23 @@
       </svg>
     </section>
 
-    <!-- Binary Bonanza: ingebed spel om binaire getallen te oefenen -->
+    <!-- SPEL: Binary Bonanza, ingebed met een <iframe>. Een iframe laat een andere
+         webpagina binnen mijn eigen pagina zien, zodat het spel direct op mijn site speelbaar is -->
     <section style="padding: 24px 28px;">
       <h2>Speel Binary Bonanza</h2>
       <div style="display:flex; justify-content:center; background-color:#252540; border-radius:10px; padding:16px; overflow-x:auto;">
         <iframe src="https://games.penjee.com/binary-bonanza/game.php" width="700" height="500" frameborder="no" scrolling="no"></iframe>
       </div>
     </section>
-    
-<!-- YouTube-video over binair stelsel -->
-<section style="padding: 24px 28px;">
-  <h2>Video: Binair stelsel uitgelegd</h2>
-  <p>Ik heb deze video gekozen omdat <!-- waarom koos je 'm --> ... De video legt uit dat <!-- korte samenvatting in eigen woorden --> ...</p>
-  <div style="border-radius:10px; overflow:hidden; max-width:680px;">
-    <iframe width="100%" height="360" src="https://www.youtube.com/embed/LpuPe81bc2w" title="Binair stelsel" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
+
+    <!-- VIDEO: YouTube-video over het binaire stelsel, ingebed met een iframe -->
+    <section style="padding: 24px 28px;">
+      <h2>Video: Binair stelsel uitgelegd</h2>
+      <p>Ik heb deze video gekozen omdat <!-- schrijf hier zelf waarom je deze video koos --> ... De video legt uit dat <!-- schrijf hier zelf een korte samenvatting in eigen woorden --> ...</p>
+      <div style="border-radius:10px; overflow:hidden; max-width:680px;">
+        <iframe width="100%" height="360" src="https://www.youtube.com/embed/LpuPe81bc2w" title="Binair stelsel" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
   </body>
 </html>

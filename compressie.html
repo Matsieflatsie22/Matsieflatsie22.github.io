@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Compressie - Fortnite Hub</title>
+    <title>Compressie - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -32,6 +37,7 @@
       </ul>
     </nav>
 
+    <!-- UITLEG: tekst over compressie en het verschil tussen bitmap en vector -->
     <section class="intro">
       <div>
         <h1>Compressie: Bitmap / Vector</h1>
@@ -43,42 +49,41 @@
       </div>
     </section>
 
+    <!-- DIAGRAM: bitmap (losse pixels) naast vector (een lijn), getekend met SVG.
+         Links zie je de blokjes van een bitmap, rechts een scherpe cirkel van een vector -->
     <section class="uitgelicht" style="height:auto; padding:24px;">
       <svg width="100%" viewBox="0 0 680 220" role="img">
         <title>Bitmap versus vector uitvergroot</title>
         <desc>Links een bitmap-afbeelding die pixelig wordt bij uitvergroting, rechts een vector-afbeelding die scherp blijft.</desc>
 
         <text x="150" y="30" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="500">Bitmap (pixels)</text>
-        <g>
-          <rect x="40" y="50" width="220" height="130" rx="4" fill="#1B1B2E" stroke="#3A3A55" stroke-width="1"/>
-          <rect x="130" y="70" width="20" height="20" fill="#F2C744"/>
-          <rect x="150" y="70" width="20" height="20" fill="#F2C744"/>
-          <rect x="110" y="90" width="20" height="20" fill="#F2C744"/>
-          <rect x="170" y="90" width="20" height="20" fill="#F2C744"/>
-          <rect x="110" y="110" width="20" height="20" fill="#F2C744"/>
-          <rect x="170" y="110" width="20" height="20" fill="#F2C744"/>
-          <rect x="130" y="130" width="20" height="20" fill="#F2C744"/>
-          <rect x="150" y="130" width="20" height="20" fill="#F2C744"/>
-        </g>
+        <rect x="40" y="50" width="220" height="130" rx="4" fill="#1B1B2E" stroke="#3A3A55" stroke-width="1"/>
+        <rect x="130" y="70" width="20" height="20" fill="#F2C744"/>
+        <rect x="150" y="70" width="20" height="20" fill="#F2C744"/>
+        <rect x="110" y="90" width="20" height="20" fill="#F2C744"/>
+        <rect x="170" y="90" width="20" height="20" fill="#F2C744"/>
+        <rect x="110" y="110" width="20" height="20" fill="#F2C744"/>
+        <rect x="170" y="110" width="20" height="20" fill="#F2C744"/>
+        <rect x="130" y="130" width="20" height="20" fill="#F2C744"/>
+        <rect x="150" y="130" width="20" height="20" fill="#F2C744"/>
         <text x="150" y="200" text-anchor="middle" fill="#B8B8C8" font-size="12">Wordt wazig bij inzoomen</text>
 
         <text x="530" y="30" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="500">Vector (lijnen)</text>
-        <g>
-          <rect x="420" y="50" width="220" height="130" rx="4" fill="#1B1B2E" stroke="#3A3A55" stroke-width="1"/>
-          <circle cx="530" cy="115" r="45" fill="none" stroke="#F2C744" stroke-width="3"/>
-        </g>
+        <rect x="420" y="50" width="220" height="130" rx="4" fill="#1B1B2E" stroke="#3A3A55" stroke-width="1"/>
+        <circle cx="530" cy="115" r="45" fill="none" stroke="#F2C744" stroke-width="3"/>
         <text x="530" y="200" text-anchor="middle" fill="#B8B8C8" font-size="12">Blijft altijd scherp</text>
       </svg>
     </section>
 
-    <!-- Video over compressie, ingebed als klikbare afbeelding (thumbnail) -->
+    <!-- VIDEO: Crash Course Computer Science #21, ingebed in een afbeelding (thumbnail).
+         De <a> maakt de afbeelding klikbaar, de <img> toont de miniatuur van de video.
+         Het play-icoontje is een rond <span> met een driehoek, alleen met CSS getekend -->
     <section style="padding: 24px 28px;">
       <h2>Video: Compressie uitgelegd</h2>
       <p>Ik heb deze video gekozen omdat <!-- schrijf hier zelf waarom je deze video koos --> ... In de video wordt uitgelegd dat <!-- schrijf hier zelf een korte samenvatting in eigen woorden --> ...</p>
 
       <a href="https://www.youtube.com/watch?v=OtDxDvCpPL4" target="_blank" style="display:block; position:relative; max-width:480px; margin:16px auto;">
         <img src="https://img.youtube.com/vi/OtDxDvCpPL4/hqdefault.jpg" alt="Crash Course Computer Science #21 - Compressie" style="width:100%; border-radius:10px; display:block;">
-        <!-- Play-knop bovenop de thumbnail -->
         <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,0.7); border-radius:50%; display:flex; align-items:center; justify-content:center;">
           <span style="width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #ffffff; margin-left:4px;"></span>
         </span>

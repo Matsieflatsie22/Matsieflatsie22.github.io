@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Kaart - Fortnite Hub</title>
+    <title>Kaart - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -32,18 +37,21 @@
       </ul>
     </nav>
 
+    <!-- UITLEG: tekst over de kaart van Fortnite -->
     <section class="intro">
       <div>
         <h1>Kaart</h1>
         <p>De kaart van Fortnite verandert elk seizoen, soms zelfs helemaal. Er staan altijd meerdere benoemde locaties op waar je kunt landen, van drukke steden met veel loot en risico, tot rustige plekjes buiten de kaart waar minder spelers komen.</p>
-        <p>Ook de "storm" (de cirkel die steeds kleiner wordt en schade doet als je erbuiten staat) dwingt spelers om dichter naar elkaar toe te bewegen naarmate de wedstrijd vordert — dat zorgt voor spannende eindfases.</p>
+        <p>Ook de "storm" (de cirkel die steeds kleiner wordt en schade doet als je erbuiten staat) dwingt spelers om dichter naar elkaar toe te bewegen naarmate de wedstrijd vordert. Dat zorgt voor spannende eindfases.</p>
       </div>
     </section>
 
-    <!-- Afbeelding van de kaart -->
-<section class="uitgelicht" style="height:auto; padding:24px;">
-  <img class="afbeelding" src="Images/images%20(5).jpeg" alt="De kaart van Fortnite">
-</section>
+    <!-- AFBEELDING: een <img> toont een plaatje. src = waar het bestand staat (map Images),
+         alt = beschrijving als de afbeelding niet laadt. class="afbeelding" zorgt dat alle
+         afbeeldingen even groot zijn (breedte en hoogte staan in de CSS) -->
+    <section class="uitgelicht" style="height:auto; padding:24px;">
+      <img class="afbeelding" src="Images/images%20(5).jpeg" alt="De kaart van Fortnite">
+    </section>
 
   </body>
 </html>

@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Kleurmodellen - Fortnite Hub</title>
+    <title>Kleurmodellen - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -32,6 +37,7 @@
       </ul>
     </nav>
 
+    <!-- UITLEG: tekst over het RGB-kleurmodel in decimaal en hexadecimaal -->
     <section class="intro">
       <div>
         <h1>Kleurmodellen</h1>
@@ -41,7 +47,8 @@
       </div>
     </section>
 
-    <!-- Voorbeeld van kleuren in decimaal en hexadecimaal -->
+    <!-- VOORBEELD: drie kleuren met hun decimale en hexadecimale code, getekend met SVG.
+         Elke <rect> is een kleurvak, fill="..." bepaalt de kleur (hier in hexadecimaal) -->
     <section class="uitgelicht" style="height:auto; padding:24px;">
       <svg width="100%" viewBox="0 0 680 200" role="img">
         <title>RGB kleur in decimaal en hexadecimaal</title>
@@ -61,14 +68,14 @@
       </svg>
     </section>
 
-    <!-- YouTube-video over kleurmodellen -->
-<section style="padding: 24px 28px;">
-  <h2>Video: Kleurmodellen uitgelegd</h2>
-  <p>Ik heb deze video gekozen omdat <!-- waarom koos je 'm --> ... De video legt uit dat <!-- korte samenvatting in eigen woorden --> ...</p>
-  <div style="border-radius:10px; overflow:hidden; max-width:680px;">
-    <iframe width="100%" height="360" src="https://www.youtube.com/embed/-b2pAEHEQZc" title="Kleurmodellen" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
+    <!-- VIDEO: YouTube-video over kleurmodellen, ingebed met een iframe -->
+    <section style="padding: 24px 28px;">
+      <h2>Video: Kleurmodellen uitgelegd</h2>
+      <p>Ik heb deze video gekozen omdat <!-- schrijf hier zelf waarom je deze video koos --> ... De video legt uit dat <!-- schrijf hier zelf een korte samenvatting in eigen woorden --> ...</p>
+      <div style="border-radius:10px; overflow:hidden; max-width:680px;">
+        <iframe width="100%" height="360" src="https://www.youtube.com/embed/-b2pAEHEQZc" title="Kleurmodellen" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
   </body>
 </html>

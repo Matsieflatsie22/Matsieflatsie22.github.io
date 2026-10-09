@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- dit is een HTML5-document -->
 <html>
+  <!-- HEAD: informatie over de pagina, niet zichtbaar op de pagina zelf -->
   <head>
-    <title>Wapens - Fortnite Hub</title>
+    <title>Wapens - Fortnite Hub</title> <!-- tekst in het browsertabblad -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="opmaak.css">
+    <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt de opmaak (CSS) aan deze pagina -->
   </head>
+
   <body>
 
-    <!-- Navigatiebalk met twee uitklapmenu's -->
+    <!-- MENU: dezelfde navigatiebalk als op alle pagina's.
+         Een <ul> (lijst) met <li> (items) en <a href> (links). Een <li class="dropdown"> bevat een
+         tweede, geneste lijst die uitklapt bij hoveren. class="actief" markeert de huidige pagina. -->
     <nav>
       <div class="logo">FORTNITE HUB</div>
       <ul>
@@ -33,7 +37,7 @@
       </ul>
     </nav>
 
-    <!-- Uitleg over wapens -->
+    <!-- UITLEG: tekst over wapens in Fortnite -->
     <section class="intro">
       <div>
         <h1>Wapens</h1>
@@ -42,10 +46,12 @@
       </div>
     </section>
 
-    <!-- Afbeelding van een wapen -->
-<section class="uitgelicht" style="height:auto; padding:24px;">
-  <img class="afbeelding" src="Images/c86c3cf8-f506-4cdc-8.width-1000.bgcolor-000.format-webp.jpg" alt="Een wapen uit Fortnite">
-</section>
+    <!-- AFBEELDING: een <img> toont een plaatje. src = waar het bestand staat (map Images),
+         alt = beschrijving als de afbeelding niet laadt. class="afbeelding" zorgt dat alle
+         afbeeldingen even groot zijn (breedte en hoogte staan in de CSS) -->
+    <section class="uitgelicht" style="height:auto; padding:24px;">
+      <img class="afbeelding" src="Images/c86c3cf8-f506-4cdc-8.width-1000.bgcolor-000.format-webp.jpg" alt="Een wapen uit Fortnite">
+    </section>
 
   </body>
 </html>
